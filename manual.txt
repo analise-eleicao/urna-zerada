@@ -1,0 +1,10 @@
+# Basta executar os comandos no python
+import pandas as pd
+import numpy as np
+from Eleicoes import Eleicao
+
+dicio_votos = {'Lula': 0.55, 'Bolsonaro': 0.25, 'Ausente': 0.1, 'Brancos e Nulos': 0.1}
+
+e = Eleicao(dicio_perc_votos=dicio_votos, nome_estatistica='Bolsonaro', eleitores=20000, secoes=200, num_simulacoes=50)
+
+analise = e.roda_simulacao()
